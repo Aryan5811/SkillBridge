@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BriefcaseBusiness, Building2, Moon, ShieldCheck, Sun, UserRoundSearch } from "lucide-react";
+import { BriefcaseBusiness, Moon, ShieldCheck, Sun, UserRoundSearch } from "lucide-react";
 import { Button } from "./ui/Button";
 
 const nav = [
