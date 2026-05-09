@@ -71,8 +71,10 @@ Backend variables live in `backend/.env.example`; frontend variables live in `fr
 
 ## Deployment
 
-- Deploy `frontend` to Vercel and set `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_SOCKET_URL`, and `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`.
-- Deploy `backend` to Render/Fly/Railway and set MongoDB, JWT, Cloudinary, SMTP, and Google OAuth variables.
+- Deploy `frontend` to Vercel from the repository root. The included `vercel.json` points Vercel at the `frontend` workspace build.
+- Deploy `backend` to Render using the included `render.yaml`, or deploy `backend` manually to Fly/Railway.
+- Set `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_SOCKET_URL`, and `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` for the frontend.
+- Set MongoDB, JWT, Cloudinary, SMTP, and Google OAuth variables for the backend.
 - Enable CORS for the deployed frontend URL.
 - Use MongoDB Atlas indexes for `location` fields and text indexes for jobs/users.
 
