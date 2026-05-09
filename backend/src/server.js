@@ -43,4 +43,9 @@ app.use((err, _req, res, _next) => {
 registerChatSocket(io);
 
 const port = process.env.PORT || 5000;
-connectDB().then(() => server.listen(port, () => console.log(`API listening on ${port}`)));
+connectDB()
+  .then(() => server.listen(port, () => console.log(`API listening on ${port}`)))
+  .catch((err) => {
+    console.error("Failed to connect to database:", err);
+    process.exit(1);
+  });
