@@ -16,4 +16,10 @@ jobs:
           node-version: 22.11.0
       - run: npm install
       - run: npm run check:backend
+      - uses: actions/cache@v4
+        with:
+          path: frontend/.next/cache
+          key: nextjs-${{ runner.os }}-${{ hashFiles('frontend/package.json') }}-${{ hashFiles('frontend/app/**/*', 'frontend/components/**/*', 'frontend/lib/**/*') }}
+          restore-keys: |
+            nextjs-${{ runner.os }}-${{ hashFiles('frontend/package.json') }}-
       - run: npm run build

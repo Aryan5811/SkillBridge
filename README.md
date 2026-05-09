@@ -86,6 +86,10 @@ docker compose up --build
 
 This starts MongoDB, the Express API, and the Next.js app. Use `.env.production.example` as the production checklist for hosted environments.
 
+## CI Cache Note
+
+The first GitHub Actions build can report a cache miss because no Next.js cache exists yet. Later runs restore `frontend/.next/cache` through the workflow cache step.
+
 ## GitHub Publishing
 
 See `docs/GITHUB_SETUP.md` for connector authorization and manual push instructions.
