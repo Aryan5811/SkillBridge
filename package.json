@@ -1,6 +1,11 @@
 {
   "name": "skillbridge",
   "private": true,
+  "packageManager": "npm@10.9.2",
+  "engines": {
+    "node": ">=20.17.0",
+    "npm": ">=10"
+  },
   "workspaces": [
     "frontend",
     "backend"
@@ -8,6 +13,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
     "build": "npm run build -w frontend",
+    "check:backend": "node --check backend/src/server.js",
     "seed": "npm run seed -w backend",
     "lint": "npm run lint -w frontend"
   },

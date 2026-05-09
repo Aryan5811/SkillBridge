@@ -15,9 +15,10 @@ SkillBridge is a full-stack job marketplace for skilled workers and contractors.
 1. Install dependencies:
 
 ```bash
-npm install -g npm
 npm install
 ```
+
+Use Node.js `20.17+` or `22.11+`. The project uses npm workspaces, so run install from the repository root.
 
 2. Create env files:
 
