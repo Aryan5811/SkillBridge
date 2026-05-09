@@ -26,7 +26,7 @@ export default function LandingPage() {
           </div>
           <div className="mt-8 grid grid-cols-3 gap-3">
             {[["42k", "verified workers"], ["8 min", "median response"], ["96%", "job match lift"]].map(([value, label]) => (
-              <div className="rounded-lg border border-white/70 bg-white/65 p-4 backdrop-blur dark:border-white/10 dark:bg-white/10" key={label}>
+              <div className="rounded-lg border border-white/70 bg-white/60 p-4 backdrop-blur dark:border-white/10 dark:bg-white/10" key={label}>
                 <p className="text-2xl font-black">{value}</p>
                 <p className="mt-1 text-xs font-semibold text-slate-500 dark:text-slate-400">{label}</p>
               </div>
@@ -38,7 +38,7 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/10 to-transparent" />
           <div className="absolute inset-x-5 bottom-5 grid gap-3 md:grid-cols-2">
             {workers.slice(0, 2).map((worker) => (
-              <Card className="bg-white/82" key={worker.name}>
+              <Card className="bg-white/80" key={worker.name}>
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="font-black text-ink">{worker.name}</p>
