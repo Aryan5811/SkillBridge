@@ -15,6 +15,7 @@ SkillBridge is a full-stack job marketplace for skilled workers and contractors.
 1. Install dependencies:
 
 ```bash
+npm install -g npm
 npm install
 ```
 
